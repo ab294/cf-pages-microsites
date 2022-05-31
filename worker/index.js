@@ -3,19 +3,19 @@ addEventListener('fetch', function (event) {
 });
 
 async function handleRequest(req) {
-    // add auth header
-    const fetchOptions = addAuthenticationHeader(req);
-   
-    const path = new URL(req.url).pathname;
-    console.log("path ", path);
+  // add auth header
+  const fetchOptions = addAuthenticationHeader(req);
+  
+  const path = new URL(req.url).pathname;
+  console.log("path ", path);
 
-    if (path.startsWith("/stores")) {
-      return fetch(`https://stores-79n.pages.dev/${path}`, fetchOptions);
-    } else if (path.startsWith("/appointments")) {
-      return fetch(`https://appointments.pages.dev/${path}`, fetchOptions);
-    } else {
-      return fetch(`https://default-b53.pages.dev/${path}`, fetchOptions);
-    }
+  if (path.startsWith("/stores")) {
+    return fetch(`https://stores-79n.pages.dev/${path}`, fetchOptions);
+  } else if (path.startsWith("/appointments")) {
+    return fetch(`https://appointments.pages.dev/${path}`, fetchOptions);
+  } else {
+    return fetch(`https://default-b53.pages.dev/${path}`, fetchOptions);
+  }
 }
 
 const addAuthenticationHeader = (req) => {
