@@ -10,6 +10,6 @@ async function handleRequest(req) {
     } else if (path.startsWith('/appointments')) {
       return fetch(`https://appointments.pages.dev/${path}`, req);
     } else {
-      return fetch(`https://www.example.com/${path}`, req);
+      return fetch(`https://default-b53.pages.dev/${path}`, req);
     }
 }
