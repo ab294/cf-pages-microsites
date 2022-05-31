@@ -2,3 +2,6 @@ name = "pages-test"
 compatibility_date = "2022-05-31"
 account_id = "189c55a3a3f424c3df1aa90464b30f6a"
 
+[vars]
+PLUGIN_HEADER_NAME = "plugin-cf-worker-auth"
+PLUGIN_HEADER_VALUE = "test123"
