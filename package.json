@@ -1,4 +1,11 @@
 {
+  "scripts": {
+    "publish:stores": "wrangler pages publish stores --project-name=stores",
+    "publish:appointments": "wrangler pages publish appointments --project-name=appointments",
+    "publish:default": "wrangler pages publish default --project-name=default",
+    "publish:worker": "wrangler publish worker/index.js --name pages-test",
+    "publish": "npm run publish:default && npm run publish:stores && npm run publish:appointments && npm run publish:worker"
+  },
   "devDependencies": {
     "wrangler": "^2.0.7"
   }
