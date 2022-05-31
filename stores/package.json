@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "publish": "wrangler pages publish ../stores --project-name=stores"
+  },
+  "devDependencies": {
+    "wrangler": "^2.0.7"
+  }
+}

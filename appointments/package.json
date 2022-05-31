@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "publish": "wrangler pages publish ./ --project-name=appointments",
+    "dev": "wrangler pages dev ./ --binding PLUGIN_HEADER_NAME=plugin-cf-worker-auth PLUGIN_HEADER_VALUE=test123"
+  },
+  "devDependencies": {
+    "wrangler": "^2.0.7"
+  }
+}
