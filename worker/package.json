@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "wrangler dev index.js",
+    "publish": "wrangler publish index.js --name pages-test"
+  },
+  "devDependencies": {
+    "wrangler": "^2.0.7"
+  }
+}
