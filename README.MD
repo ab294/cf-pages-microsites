@@ -5,6 +5,7 @@ Pages by default are designed to own a whole domain. Whilst this is fine for a s
 * For a statically generated site only rebuilding certain sections of the site rather than everything
 
 ### Example
+This is what is implemented in this repo
 1. example.com/stores/*       -> stores microsite
 1. example.com/appointments/* -> appointments microsite
 1. example.com/*              -> default site
