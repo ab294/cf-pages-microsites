@@ -23,12 +23,20 @@ Pages by default are designed to own a whole domain. Whilst this is fine for a s
 
 Note: this repo is using Direct Upload. This is not needed for this the microsite approach, but is needed as the github integration doesn't work with a monorepo.
 
-## Potential Issues
+### How to run
+Assumptions: CloudFlare account, wrangler installed and authenticated
+1. Run `npm run publish` choosing to set up each of the microsites as a new pages app, and the worker as a new worker instance
+1. Configure the wrangler.toml with each of the pages app urls, and redeploy the worker
+1. Set the environment variables PLUGIN_HEADER_NAME & PLUGIN_HEADER_VALUE for each of the pages apps
+1. Visit the worker url and navigate between the different apps.
+1. Visit the microsites urls and confirm that they are not directly accessible
+
+### Potential Issues
 1. wrangler pages publish is a new tool, which has some bugs, for example: https://github.com/cloudflare/wrangler2/issues/938. This requires the publish commands to be run from the parent directory rather than in the nested directory.
 1. wrangler requires the functions folder to be in the top scope, this means all the microsites are currently sharing the same functions folder, by preference this would be nested under the specific microsite folder
 1. Need to be careful about path referencing, i.e. the microsites should be nested under the path they're used on as we need to make sure the referenced css, js and images are fetched from the microsite rather than the default app.
 
-## Not included in the work so far
+### Not included in the work so far
 * Extract the functions folder as a proper pages plugin
 * Handle routing properly
 * Set up repo as a proper monorepo
