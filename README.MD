@@ -21,6 +21,8 @@ Pages by default are designed to own a whole domain. Whilst this is fine for a s
 * Deploy a worker that manages the routing between the different microsites and add the authorisation header to the sub site
 * The worker and all the pages need to be set up with the same environment variables: PLUGIN_HEADER_NAME & PLUGIN_HEADER_VALUE
 
+Note: this repo is using Direct Upload. This is not needed for this the microsite approach, but is needed as the github integration doesn't work with a monorepo.
+
 ## Potential Issues
 1. wrangler pages publish is a new tool, which has some bugs, for example: https://github.com/cloudflare/wrangler2/issues/938. This requires the publish commands to be run from the parent directory rather than in the nested directory.
 1. wrangler requires the functions folder to be in the top scope, this means all the microsites are currently sharing the same functions folder, by preference this would be nested under the specific microsite folder
