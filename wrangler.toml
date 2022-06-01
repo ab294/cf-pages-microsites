@@ -5,3 +5,6 @@ account_id = "189c55a3a3f424c3df1aa90464b30f6a"
 [vars]
 PLUGIN_HEADER_NAME = "plugin-cf-worker-auth"
 PLUGIN_HEADER_VALUE = "test123"
+APPOINTMENT_APP_URL = "https://appointments.pages.dev/"
+STORES_APP_URL = "https://stores-79n.pages.dev/"
+DEFAULT_APP_URL = "https://default-b53.pages.dev/"
